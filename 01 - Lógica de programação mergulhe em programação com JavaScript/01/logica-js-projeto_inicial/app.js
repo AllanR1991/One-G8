@@ -18,13 +18,18 @@ while (chute != numeroSecreto) {
         } else {
             alert(`O número secreto é maior que ${chute}`);
         }
-        tentaivas ++;
+        tentaivas++;
     }
 }
 
-if(tentaivas>1){
-    alert(`Isso ai você descobriu o número secreto (${numeroSecreto}) com ${tentaivas} tentivas.`); //Template string.
-}else{
-    alert(`Isso ai você descobriu o número secreto (${numeroSecreto}) com ${tentaivas} tentiva.`); //Template string.
+let palavraTentativas = tentaivas > 1 ? 'tentativas' : 'tentativa';
+alert(`Isso ai você descobriu o número secreto (${numeroSecreto}) com ${tentaivas} ${palavraTentativas}.`); //Template string.
 
-}
+
+
+// if(tentaivas>1){
+//     alert(`Isso ai você descobriu o número secreto (${numeroSecreto}) com ${tentaivas} tentivas.`); //Template string.
+// }else{
+//     alert(`Isso ai você descobriu o número secreto (${numeroSecreto}) com ${tentaivas} tentiva.`); //Template string.
+
+// }

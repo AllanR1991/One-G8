@@ -23,3 +23,17 @@ do {
         numero+=1;
     }
 } while (numero < 0)
+
+
+contador = 0;
+do {
+    numero = prompt('Digite um número para contagem progressiva: ');
+    if(numero>=0){
+        while (contador <= numero) {
+            console.log(contador)
+            contador++;
+        }
+        // Restaura o valor de 'numero' para evitar loop infinito no 'do...while' após a contagem regressiva.
+        
+    }
+} while (numero < 0)

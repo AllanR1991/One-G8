@@ -1,3 +1,5 @@
+let numeroSecreto = gerarNumeroAleatorio();
+
 //Acessando os elementos do HTML
 function exibirTextoNaTela(tag, texto) {
      let campo = document.querySelector(tag);
@@ -5,7 +7,12 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function verificarChute() {
-     console.log('O botão foi clicado.')
+     let chute = document.querySelector('input').value;
+     console.log(chute==numeroSecreto);
+}
+
+function gerarNumeroAleatorio(){
+     return parseInt(Math.random() * 10 + 1);
 }
 
 exibirTextoNaTela('h1','Jogo do número secreto');

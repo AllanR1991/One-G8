@@ -1,4 +1,5 @@
 let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -33,7 +34,11 @@ function limparCampo(){
 }
 
 function gerarNumeroAleatorio(){
-     let numeroSorteado =  parseInt(Math.random() * 4  + 1);
+     let numeroSorteado =  parseInt(Math.random() * numeroLimite  + 1);
+     let quantidadeElementosNaLista = listaDeNumerosSorteados.length;
+     if(quantidadeElementosNaLista == numeroLimite){
+          listaDeNumerosSorteados = []
+     }
      if(listaDeNumerosSorteados.includes(numeroSorteado)){
           return gerarNumeroAleatorio();
      }else{

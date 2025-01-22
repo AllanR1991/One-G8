@@ -7,17 +7,17 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
      let campo = document.querySelector(tag);
      campo.innerHTML = texto;
-     responsiveVoice.speak(texto,'Portuguese Female',{rate:1.5});
+     //responsiveVoice.speak(texto,'Portuguese Female',{rate:1.5});
      
-     // Alternativa para o responsiveVoice
-     // if ('speechSynthesis' in window) {
-     //      let utterance = new SpeechSynthesisUtterance(texto);
-     //      utterance.lang = 'pt-BR'; 
-     //      utterance.rate = 1.2; 
-     //      window.speechSynthesis.speak(utterance); 
-     //  } else {
-     //      console.log("Web Speech API não suportada neste navegador.");
-     //  }
+     //Alternativa para o responsiveVoice
+     if ('speechSynthesis' in window) {
+          let utterance = new SpeechSynthesisUtterance(texto);
+          utterance.lang = 'pt-BR'; 
+          utterance.rate = 1.2; 
+          window.speechSynthesis.speak(utterance); 
+      } else {
+          console.log("Web Speech API não suportada neste navegador.");
+      }
 }
 
 function verificarChute() {
